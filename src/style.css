@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.apptitle {
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+.box-container {
+  margin: 10%;
+  padding: 50px;
+  text-align: center;
+}
+
+.border {
+  height: 200px;
+}
+
+button {
+  margin-right: 20px;
+  padding: 2px;
+}
