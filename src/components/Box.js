@@ -1,48 +1,6 @@
 import React from "react";
-import { createStore } from "redux";
-
-const reducer = (state = 100000, action) => {
-  switch (action.type) {
-    case "inc":
-      return state + 10000;
-    case "dec":
-      if(state === 0) {
-        return alert('Bank Balance is 0, credit some amount to account');
-      }
-      return state - 10000;
-    case "reset":
-      if(state === 0) {
-        return alert("No money available to donate")
-      }
-      return 0;
-    default:
-      return state;
-  }
-};
-
-const store = createStore(reducer);
-
-store.subscribe(() => console.log(store.getState()));
-
-//action creators
-
-const incBal = () => {
-  return {
-    type: "inc"
-  };
-};
-
-const decBal = () => {
-  return {
-    type: "dec"
-  };
-};
-
-const resetBal = () => {
-  return {
-    type: "reset"
-  };
-};
+import store from "./store";
+import * as actionCreators from "./actionCreators";
 
 class Box extends React.Component {
   render() {
@@ -52,7 +10,7 @@ class Box extends React.Component {
         <button
           className="btn btn-default"
           onClick={() => {
-            store.dispatch(incBal());
+            store.dispatch(actionCreators.incBal());
           }}
         >
           + 10,000
@@ -60,7 +18,7 @@ class Box extends React.Component {
         <button
           className="btn btn-default"
           onClick={() => {
-            store.dispatch(decBal());
+            store.dispatch(actionCreators.decBal());
           }}
         >
           - 10,000
@@ -68,7 +26,7 @@ class Box extends React.Component {
         <button
           className="btn btn-default"
           onClick={() => {
-            store.dispatch(resetBal());
+            store.dispatch(actionCreators.resetBal());
           }}
         >
           Donate to charity
