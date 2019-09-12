@@ -1,4 +1,4 @@
-import Redux from "redux";
+import { createStore } from "redux";
 
 const reducer = (state = 100000, action) => {
   switch (action.type) {
@@ -7,6 +7,8 @@ const reducer = (state = 100000, action) => {
   }
 };
 
-const store = Redux.createStore(reducer);
+const store = createStore(reducer);
+
+store.subscribe(() => console.log(store.getState()));
 
 export default store;
