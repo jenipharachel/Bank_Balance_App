@@ -4,8 +4,6 @@ export const incBal = () => {
   };
 };
 
-
-
 export const decBal = () => {
   return {
     type: "dec"
