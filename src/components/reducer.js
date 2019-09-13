@@ -4,12 +4,14 @@ const reducer = (state = 100000, action) => {
       return state + 10000;
     case "dec":
       if (state === 0) {
-        return alert("Bank Balance is 0, credit some amount to account");
+        alert("Bank Balance is 0, credit some amount to account");
+        return 0;
       }
       return state - 10000;
     case "reset":
       if (state === 0) {
-        return alert("No money available to donate");
+        alert("No money available to donate");
+        return 0;
       }
       return 0;
     default:
