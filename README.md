@@ -63,6 +63,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
+Code deployed to now.sh
+Command to install now package : sudo npm i -g now
+Command to install serve : npm i serve
+serve runs dependencies and build folder
+Command to deploy code to now.sh : now
+
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
