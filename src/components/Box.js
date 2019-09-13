@@ -4,7 +4,7 @@ class Box extends React.Component {
   render() {
     return (
       <div className="border border box-container">
-        <p>Your balance is: {this.props.value}</p>
+        <p>Your balance is: Rs.{this.props.value.toLocaleString("en-IN")}</p>
         <button className="btn btn-default" onClick={this.props.incBal}>
           + 10,000
         </button>
