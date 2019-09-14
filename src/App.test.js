@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import Header from "./components/Header";
 import reducer from "./components/reducer";
+import { incBal, decBal, resetBal } from "./components/actionCreators";
 
 test("testing header component", () => {
   const component = shallow(<Header />);
@@ -40,5 +41,25 @@ describe("testing reducer function", () => {
   test("default", () => {
     const store = setUp(10000);
     expect(store).toEqual(10000);
+  });
+});
+
+describe("testing action creators", () => {
+  test("inc", () => {
+    const action = { type: "inc" };
+    const result = incBal();
+    expect(result).toEqual(action);
+  });
+
+  test("dec", () => {
+    const action = { type: "dec" };
+    const result = decBal();
+    expect(result).toEqual(action);
+  });
+
+  test("reset", () => {
+    const action = { type: "reset" };
+    const result = resetBal();
+    expect(result).toEqual(action);
   });
 });
