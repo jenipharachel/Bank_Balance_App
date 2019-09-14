@@ -4,7 +4,7 @@ import { Button, Row, Col } from "react-bootstrap";
 class Box extends React.Component {
   render() {
     return (
-      <div className="border border box-container">
+      <div className="border border-dark box-container">
         <p>Your balance is: Rs.{this.props.value.toLocaleString("en-IN")}</p>
         <Row>
           <Col>
