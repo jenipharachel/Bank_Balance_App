@@ -1,6 +1,7 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import { incBal, decBal, resetBal } from "./actionCreators";
 import Header from "./Header";
 import Box from "./Box";
@@ -14,6 +15,13 @@ const mapDispatchToProps = function(dispatch) {
 };
 
 class App extends React.Component {
+  static propTypes = {
+    incBal: PropTypes.func.isRequired,
+    decBal: PropTypes.func.isRequired,
+    resetBal: PropTypes.func.isRequired,
+    value: PropTypes.number.isRequired
+  };
+
   render() {
     return (
       <div>

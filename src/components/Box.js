@@ -1,7 +1,15 @@
 import React from "react";
 import { Button, Row, Col } from "react-bootstrap";
+import PropTypes from "prop-types";
 
 class Box extends React.Component {
+  static propTypes = {
+    incBal: PropTypes.func.isRequired,
+    decBal: PropTypes.func.isRequired,
+    resetBal: PropTypes.func.isRequired,
+    value: PropTypes.number.isRequired
+  };
+
   render() {
     return (
       <div className="border border-dark box-container">
